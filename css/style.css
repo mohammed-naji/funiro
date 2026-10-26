@@ -392,7 +392,8 @@ header .menu-toggle button {
 }
 
 .beautiful-rooms .wrapper .images {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: flex-start;
   gap: 10px;
 }
@@ -505,6 +506,18 @@ footer .copyright {
 
 footer .copyright p {
   margin: 0;
+}
+
+@media (max-width: 991px) {
+  footer .top-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .top-footer {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* End Footer Styles */
